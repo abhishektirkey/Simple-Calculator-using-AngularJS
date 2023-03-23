@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>AngularJS Calculator</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+	<script src="script.js"></script>
+	<style>
+		.input {
+			margin-top: 10px;
+			margin-bottom: 10px;
+			width: 180px;
+			height: 30px;
+			font-size: 16px;
+			padding: 5px;
+			border-radius: 5px;
+			border: 1px solid rgb(227, 9, 9);
+			border-radius: 5px;
+		}
+		.container { 
+			height: 70%;
+			position: relative;
+			border: 3px solid green; 
+			border-radius: 10px;
+		  }
+		  
+		  .center {
+			margin: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		  }
+	</style>
+</head>
+<body ng-controller="myCtrl">
+<div class="center container" style="background-color:rgba(0, 255, 255, 0.438);">
+	<h1 style="color: blue; text-align: center"> <u>Simple Calculator Using ANGULAR JS</u> </h1>
+	
+	<div style="text-align: center;">
+		<p> <b>Input 1 :</b>   
+		<input type="text";  ng-model="firstNum" class="input" placeholder="Enter First Number">
+	</p>
+	</div >
+	<div style="text-align: center;">
+		<p> <b>Input 2 :</b> 
+		<input type="text" ng-model="secondNum" class="input" placeholder="Enter Second Number">
+		</p>
+	</div>
+	<div>
+		<h4 style="text-align: center;">SELECT THE OPERAND </h4>
+		<button ng-click="add()" class="input">Addition (+)</button>
+		<button ng-click="subtract()" class="input">Subtraction (-)</button>
+		<button ng-click="multiply()" class="input">Multiplication (*)</button>
+		<br>
+		
+		<button ng-click="divide()" class="input">Division (/)</button>
+		<button ng-click="" class="input">None</button>
+		<button ng-click="modulus()" class="input">Modulus (%)</button>
+		
+	</div>
+	<div style="text-align: center;">
+		<p><b>Result :</b>  
+		<input type="text" ng-model="result" class="input" placeholder="Result"> </p>
+		<p>Designed by Abhishek Tirkey</p>
+	</div>
+</div>
+</body>
+</html>
+
